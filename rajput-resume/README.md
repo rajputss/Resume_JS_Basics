@@ -1,4 +1,4 @@
-This project requires an online resume using HTML, CSS and pre-dominantly JavaScript. The resume makes it easy to show employers why you’re perfect for the job. 
+This project shows an online resume using HTML, CSS and pre-dominantly JavaScript. The resume makes it easy to show employers why you’re perfect for the job. 
 
 
 Repository includes the following files:

@@ -10,7 +10,7 @@ var bio = {
         
     }], 
     "welcomeMessage" : "A very ambitious technology professional who finds immense pleasure in software development and solving problems using innovative techniques.", 
-    "biopic" : "images/fry.jpg",
+    "biopic" : "images/ProfilePic.jpg",
     
     "skills" : ["Motivated","Responsible","Love to teach","Avid Learner", "Energetic","Creative Thinker","Bilingual","Goal Oriented"]
 };
