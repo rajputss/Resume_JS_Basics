@@ -4,30 +4,57 @@
   <title>Resume</title>
 
   <!-- Load the page styles. -->
-  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <link href="css/style.css" rel="stylesheet" type="text/css"></link>
+  <link href="css/main.css" rel="stylesheet" type="text/css"></link>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="js/jQuery.js"></script>
   <script src="js/helper.js"></script>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+  <title>S.RAJPUT RESUME</title>
 
   <meta name="viewport" content="width=device-width">
 </head>
+
 <body unresolved>
   <div id="main">
     <div id="header" class="center-content clearfix">
       <ul id="topContacts" class='flex-box'></ul>
     </div>
+    <nav id="nav-bar">
+        <ul id="nav-menu">
+          <li><a class="nav-item" href="#workExperience">WORK</a>
+          </li>
+          <li><a class="nav-item" href="#projects">PROJECTS</a>
+          </li>
+          <li><a class="nav-item" href="#education">EDUCATION</a>
+          </li>
+        </ul>
+      </nav>
     <div style='clear: both;'></div>
-    <div id="workExperience" class='gray'>
-      <h2>Work Experience</h2>
+
+    <div id="summary" class="sections">
+        <h2 name="summary" class="sub-title">SUMMARY</h2>
     </div>
+    
+    <div id="workExperience" class='gray sections'>
+      <h2 name="work" class="sub-title">Work Experience</h2>
+    </div>
+    
     <div id="projects">
-      <h2>Projects</h2>
+      <h2 name="projects" class="sub-title">Projects</h2>
     </div>
+    
     <div id="education" class='gray'>
-      <h2>Education</h2>
+      <h2 name="education" class="sub-title">Education</h2>
     </div>
+
+     <div id="skillsChart">
+        <h2 class="sub-title">Skills Chart</h2>
+    </div>
+
     <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
+      <h2 class="sub-title">Where I've Lived and Worked</h2>
     </div>
     <div id="letsConnect" class='dark-gray'>
       <h2 class='orange center-text'>Let's Connect</h2>
@@ -55,6 +82,12 @@
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('letsConnect').style.display = 'none';
+    }
+        if (document.getElementsByClassName("skills-entry").length === 0) {
+      document.getElementById("skillsChart").style.display = "none";
+    }
+    if (document.getElementsByClassName("flex-item").length === 0) {
+      document.getElementById("letsConnect").style.display = "none";
     }
     if(document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.display = 'none';

@@ -2,13 +2,14 @@
   padding:0;
   margin:0;
   font-family: 'Roboto', sans-serif;
+  font-weight: 400;
 }
 
 .clearfix {
   overflow: auto;
 }
 
-.education-entry, .work-entry, .project-entry {
+.education-entry, .work-entry, .project-entry, .sum-entry {
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -145,10 +146,10 @@ ul {
   width: 200px;
   display: none;
 }
-
+/*
 img {
   padding: 10px;
-}
+}*/
 
 /* Bar chart stuff */
 .chart div {
@@ -169,7 +170,7 @@ span {
 #letsConnect {
   text-align: center;
 }
-
+/*
 @media only screen and (max-width: 1024px) {
   #letsConnect {
     margin-top: 5%;
@@ -180,15 +181,15 @@ span {
   .biopic {
     width: 175px;
   }
-}
+}*/
 
 @media only screen and (max-width: 750px) {
-  #letsConnect {
+ /* #letsConnect {
     margin-top: 10%;
   }
   .biopic {
     width: 150px;
-  }
+  } */
   .welcome-message {
     display: none;
   }
