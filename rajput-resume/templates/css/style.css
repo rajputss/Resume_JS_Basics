@@ -9,7 +9,7 @@
   overflow: auto;
 }
 
-.education-entry, .work-entry, .project-entry, .sum-entry {
+.education-entry, .work-entry, .project-entry, .sum-entry, .classes-entry {
   padding-left: 5%;
   padding-right: 5%;
 }

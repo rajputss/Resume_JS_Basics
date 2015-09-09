@@ -6,11 +6,11 @@ var bio = {
         "email" : "shawn.s.rajput@gmail.com",
         "Github" : "rajputss", 
         "location" : "Edmond, Oklahoma",
-        "Twitter" :"N/A"
+        "Twitter" :"s_rajputs"
         
     }], 
     "welcomeMessage" : "A very ambitious technology professional who finds immense pleasure in software development and solving problems using innovative techniques.", 
-    "biopic" : "images/ProfilePic.jpg",
+    "biopic" : "images/github_profile_pic.jpg",
     
     "skills" : ["Motivated","Responsible","Love to teach","Avid Learner", "Energetic","Creative Thinker","Bilingual","Goal Oriented"]
 };
@@ -70,15 +70,25 @@ var work = {
 var education = {
 	"schools" : [
 	{
-	"name" : "Old Dominion University",
-	"city" : "Norfolk",
-	"degree" : "Bachelors",
-	"majors" : ["Finance"],
-	"dates" : 2009,
-	"url" : "http://odu.edu"
-}],
+    	"name" : "Old Dominion University",
+    	"city" : "Norfolk, Virginia",
+    	"degree" : "Bachelors",
+    	"majors" : ["Finance with Insurance"],
+    	"dates" : 2009,
+    	"url" : "http://odu.edu"
+    },
+    {
+        "name" : "Udacity",
+        "city" : "Online",
+        "degree" : "NanoDegree",
+        "majors" : ["FullStack"],
+        "dates" : 2015,
+        "url" : "http://udacity.com"
+    }]
+};
 
-	"onlineCourses": [{
+var classes = {
+	"onlineClasses": [{
     "title": "Intro to Computer Science",
     "school": "Udacity",
     "dates": "January 2015 - March 2015",
@@ -148,25 +158,25 @@ var projects = {
     "url": "https://github.com/rajputss/Project3_Item_Catalog",
     "dates": "May 2015",
     "description": "This web application was the third project for full stack Udacity nanodegree that provides a list of items within a variety of categories as well as provide a user registration and authentication system. Registered users will have the ability to post, edit and delete their own items.",
-    //"image": "images/dw_wiki_s_mini.jpg"
+    "image": "images/catalog_items.png"
   }, {
     "title": "Conference Central",
     "url": "https://github.com/rajputss/Project4_Conference_Organization_App",
     "dates": "July 2015",
     "description": "This web application was the fourth project for full stack Udacity nanodegree (Developing Scalable Apps with Python). The project was built on Google App Engine.",
-    //"image": "images/dw_scalable_s_mini.jpg"
+    "image": "images/conf_central_app.png"
   }, {
     "title": "Movie Trailer Website",
     "url": "https://github.com/rajputss/Project-1-Movie-Trailer-Website-",
     "dates": "February 2015",
     "description": "This is the first project for full stack Udacity nanodegree that has server-side code to store a list favorite movies, including box art imagery and a movie trailer URL. This data will be served as a web page allowing visitors to review their movies and watch the trailers.",
-    //"image": "images/dw_portfolio_s.jpg"
+    "image": "images/movie_trailer.png"
   }, {
     "title": "Relational Database Tournament",
     "url": "https://github.com/rajputss/Project2_RelationalDatabase_Tournament",
     "dates": "March 2015",
     "description": "This is the second project for full stack Udacity nanodegree, where a database schema was built to store the game matches between players. Code was written to query this data and determine the winners of various games.",
-    //"image": "images/dw_resume_s.png"
+    "image": "images/Project2.png"
   }]
 };
 
@@ -202,22 +212,10 @@ education.display = function() {
         var formattedName = HTMLschoolName.replace("%data%",education.schools[school].name);
         var formattedDegree = HTMLschoolDegree.replace("%data%",education.schools[school].degree);
         var formattedDates = HTMLschoolDates.replace("%data%",education.schools[school].dates);
-        var formattedLocation = HTMLschoolLocation.replace("%data%",education.schools[school].location);
+        var formattedLocation = HTMLschoolLocation.replace("%data%",education.schools[school].city);
         var formattedMajor = HTMLschoolMajor.replace("%data%",education.schools[school].majors);
         $(".education-entry:last").append(formattedName + formattedDegree,formattedDates,formattedLocation,formattedMajor);
     }
-
- $("#education").append(HTMLonlineClasses);
-          for (var course in education.onlineCourses) {
-             
-              $("#education").append(HTMLschoolStart);
-                  var formattedonlineTitle =HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
-                  var formattedonlineSchool =HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
-                  var formattedonlineDate =
-                  HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
-                  var formattedURL =HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-                 $(".education-entry:last").append(formattedonlineTitle + formattedonlineSchool,formattedonlineDate,formattedURL);
-                }
 };
 
 work.display = function() {
@@ -244,11 +242,20 @@ projects.display = function(){
         for (image in projects.project[item].images) {
             var formattedImage = HTMLprojectImage.replace("%data%",projects.project[item].images[image]);
             $(".project-entry:last").append(formattedImage);
-        };
-        
-
-        
+        };        
     }
+};
+
+classes.display = function(){
+    for(item in classes.onlineClasses){
+        $("#classes").append(HTMLonlineClasses);
+
+        var formattedTitle = HTMLonlineTitle.replace("%data%",classes.onlineClasses[item].title);
+        var formattedDates = HTMLonlineDates.replace("%data%",classes.onlineClasses[item].dates);
+        var formattedSchool = HTMLonlineSchool.replace("%data%",classes.onlineClasses[item].school);
+        var formattedURL = HTMLonlineURL.replace("%data%",classes.onlineClasses[item].url);
+        $(".classes-entry:last").append(formattedTitle,formattedDates,formattedSchool);
+    }   
 };
 
 function inName(name){
@@ -263,6 +270,7 @@ bio.display();
 work.display();
 projects.display();
 education.display();
+classes.display();
 
 
 $("#main").append(internationalizeButton);

@@ -23,6 +23,12 @@
   margin-right: 30px;
   padding: 0px;
   border-radius: 100%;
+        /*margin-top: 10px;*/
+        display: block;
+        max-width: 125px;
+        max-height: 250px;
+        min-height: auto;
+        min-width: auto;
 }
 .welcome-message {
   font-size: 1.5em;
@@ -92,8 +98,8 @@ a.nav-item:active {
   background-color: rgba(255, 255, 255, 0.4);
 }
 .sections {
-  padding-top: 80px;
-  padding-bottom: 70px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 #mapDiv {
   padding-top: 60px;
