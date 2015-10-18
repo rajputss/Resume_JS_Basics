@@ -122,7 +122,7 @@ function initializeMap() {
   function locationFinder() {
 
     // initializes an empty array
-    var locations = [];
+    var locations = ["Oklahoma City, Oklahoma", "St. Louis, Missouri", "Des Moines, Iowa", "McLean, Virginia", "Fredericksburg, Virginia", "Virginia Beach, Virginia"];
 
     // adds the single location property from bio to the locations array
     for (var contact in bio.contacts) {
